@@ -1,0 +1,4 @@
+sysctl -w net.ipv4.tcp_max_syn_backlog=80. #queue size
+netstat -tna | grep SYN_RECV | wc -l #check connection
+ip tcp_metrics flush #flush metrics
+ip tcp_metrics show #show metrics
